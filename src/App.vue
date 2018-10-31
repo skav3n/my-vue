@@ -1,26 +1,34 @@
 <template>
   <div id="app">
     <div class="app-menu">
-      <left-menu/>
+      <app-menu></app-menu>
     </div>
-    <div class="app-content">
-      <router-view></router-view>
-    </div>
+    
+    <md-content class="app-content md-scrollbar">
+      <router-view class="content"></router-view>
+    </md-content>
   </div>
 </template>
 
 <script>
-import LeftMenu from './components/LeftMenu'
+import Store from './store';
+import MainModule from './store/main.store';
+import AppMenu from './components/menu/menu.component.vue';
 
 export default {
   name: 'app',
+  created() {
+    Store.registerModule(MainModule.name, MainModule);
+  },
   components: {
-    LeftMenu
-  }
+    AppMenu,
+  },
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './assets/theme/variables/colors';
+
 body {
   margin: 0;
 }
@@ -28,18 +36,19 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   display: flex;
   flex-wrap: nowrap;
   min-height: 100vh;
 }
 .app-menu {
-  flex: 0 0 200px;
-  background: tomato;
+  flex: 0 0 auto;
+  background: $greenSpring;
 }
 .app-content {
   flex: 0 1 100%;
-  background: green;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 25px;
 }
 </style>

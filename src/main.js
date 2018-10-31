@@ -1,17 +1,25 @@
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import VueFire from 'vuefire'
+import Vue from 'vue';
+import VueFire from 'vuefire';
+import VueMaterial from 'vue-material';
+import App from './App';
+import router from './router';
+import store from './store';
+import CommonComponents from './common';
 
-Vue.config.productionTip = false
+import './style.scss';
 
-Vue.use(VueFire)
+Vue.config.productionTip = false;
+
+Vue.use(VueFire);
+Vue.use(VueMaterial);
+Vue.use(CommonComponents);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App },
-  render: h => h(App)
-})
+  render: h => h(App),
+});

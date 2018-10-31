@@ -1,11 +1,10 @@
 <template>
-  <div class="kpir">
-    kpir page
+  <div class="component">
+    <span class="md-headline">VAT</span>
   </div>
 </template>
 
 <script>
-import {db} from '@/services/firebase.service';
 
 export default {}
 </script>

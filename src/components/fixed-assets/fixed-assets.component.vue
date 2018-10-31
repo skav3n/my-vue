@@ -1,11 +1,10 @@
 <template>
-  <div class="vat">
-    vat page
+  <div class="component">
+    <span class="md-headline">Środki trwałe</span>
   </div>
 </template>
 
 <script>
-import {db} from '@/services/firebase.service';
 
 export default {}
 </script>

@@ -1,0 +1,10 @@
+$greenSpring: #B5C0B0;
+
+@mixin background-opacity($color, $opacity: 1) {
+  background: rgba($color, $opacity);
+  fill: rgba($color, $opacity);
+}
+@mixin color-opacity($color, $opacity: 1) {
+  color: rgba($color, $opacity);
+  fill: rgba($color, $opacity);
+}

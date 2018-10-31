@@ -1,0 +1,8 @@
+@mixin font-icon($content) {
+    text-align: center;
+    font-family: 'Simple-Line-Icons', serif;
+    font-size: 28px;
+    &::before {
+      content: $content;
+    }
+  }
