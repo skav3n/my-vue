@@ -3,10 +3,14 @@
     <div class="app-menu">
       <app-menu></app-menu>
     </div>
-    
+
     <md-content class="app-content md-scrollbar">
       <router-view class="content"></router-view>
     </md-content>
+
+    <div>
+      Footer
+    </div>
   </div>
 </template>
 
