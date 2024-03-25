@@ -9,7 +9,7 @@
     </md-content>
 
     <div>
-      Footer
+      Footer 2
     </div>
   </div>
 </template>
